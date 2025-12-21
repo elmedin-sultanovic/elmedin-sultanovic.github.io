@@ -35,7 +35,7 @@
                 <li>Objectif 1 : Installation et configuration d'une machine SIEM en utilisant un docker ELK</li>
                 <li>Objectif 2 : Installation et configuration d'une machine IDS/IPS Suricata (Opnsense)</li>
                 <li>Objectif 3 : Installation et configuration d'une machine attaquante (Kali Linux)</li>
-                <li>Objectif 4 : Analyser les logs généré par les règles mise en place</li>
+                <li>Objectif 4 : Analyser les logs générés par les règles mise en place</li>
             </ul>
         </section>
 
@@ -44,90 +44,79 @@
 <section class="project-section">
     <h2>📸 Captures d'écran & Schémas</h2>
     <div class="images-grid">
-        <div class="image-card" onclick="openZoomModal('images/projet1-schema.png', 'Schéma du réseau')">
-            <img src="images/projet1-schema.png" alt="Schéma réseau">
+        <div class="image-card">
+            <a href="images/projet1-schema.png" target="_blank">
+                <img src="images/projet1-schema.png" alt="Schéma réseau">
+            </a>
             <p class="image-caption">Schéma du réseau qui montre les différentes machines utilisées, la machine SIEM et la machine OPNsense ont toutes les deux été installées et configurées depuis VMware qui permet de créer des machines virtuelles. Une fois le tout bien configuré, chaque machine du réseau pouvait avoir accès à OPNsense et à elasticsearch.</p>
         </div>
-        <div class="image-card" onclick="openZoomModal('images/projet1-dashboard1.png', 'Dashboard Elasticsearch')">
-            <img src="images/projet1-dashboard1.png" alt="Dashboard Elasticsearch">
+        <div class="image-card">
+            <a href="images/projet1-dashboard1.png" target="_blank">
+                <img src="images/projet1-dashboard1.png" alt="Dashboard Elasticsearch">
+            </a>
             <p class="image-caption">Dashboard qui montre: les IP qui sont concernées par le plus de logs, les pays les plus concernés, les codes de status HTTP afin de détecter si des erreurs arrivent, les protocoles les plus utilisés.</p>
         </div>
-        <div class="image-card" onclick="openZoomModal('images/projet1-alert.png', 'Alertes Suricata')">
-            <img src="images/projet1-alert.png" alt="Alertes Suricata">
+        <div class="image-card">
+            <a href="images/projet1-alert.png" target="_blank">
+                <img src="images/projet1-alert.png" alt="Alertes Suricata">
+            </a>
             <p class="image-caption">Les alertes générées par Suricata à l'aide des règles que j'ai créées</p>
         </div>
-                <div class="image-card" onclick="openZoomModal('images/projet1-elasticalert.png', 'Alertes Suricata')">
-            <img src="images/projet1-elasticalert.png" alt="Alertes Suricata">
-            <p class="image-caption">Les alertes générées par Suricata depuis ELK (elasticsearch) </p>
+        <div class="image-card">
+            <a href="images/projet1-elasticalert.png" target="_blank">
+                <img src="images/projet1-elasticalert.png" alt="Alertes Elasticsearch">
+            </a>
+            <p class="image-caption">Les alertes générées par Suricata depuis ELK (elasticsearch)</p>
         </div>
     </div>
 </section>
 
-<!-- Modal zoom avec déplacement -->
-<div id="zoomModal" class="zoom-modal">
-    <span class="zoom-close" onclick="closeZoomModal()">&times;</span>
-    <div class="zoom-controls">
-        <button onclick="zoomIn()">🔍+</button>
-        <button onclick="zoomOut()">🔍-</button>
-        <button onclick="resetZoom()">⟲</button>
-    </div>
-    <div class="zoom-container" id="zoomContainer">
-        <img id="zoomImage" draggable="false">
-    </div>
-</div>
-
-<!-- Modal pour afficher l'image en grand -->
-<div id="imageModal" class="modal" onclick="closeModal()">
-    <span class="close">&times;</span>
-    <img class="modal-content" id="modalImage">
-    <div id="caption"></div>
-</div> 
-
-        <!-- Section réalisation -->
-        <section class="project-section">
-            <h2> Réalisation technique</h2>
-            <div class="technical-details">
-                <h3></h3>
-                <p>
-                    Liste et explique les technologies, outils et langages que tu as utilisés.
-                </p>
-                
-                <h3>Étapes principales</h3>
-                <ol class="steps-list">
-                    <li><strong>Phase 1 :</strong> Analyse des besoins et conception de l'architecture</li>
-                    <li><strong>Phase 2 :</strong> Installation et configuration des équipements réseau</li>
-                    <li><strong>Phase 3 :</strong> Mise en place des mesures de sécurité</li>
-                    <li><strong>Phase 4 :</strong> Tests de vulnérabilité et validation</li>
-                </ol>
-
-                <h3>Difficultés rencontrées</h3>
-                <p>
-                    Parle des défis que tu as rencontrés et comment tu les as surmontés. Ça montre ta capacité à résoudre 
-                    des problèmes !
-                </p>
+<!-- Section réalisation -->
+<section class="project-section">
+    <h2> Réalisation technique</h2>
+    <div class="technical-details">
+        <h3>Documentation technique</h3>
+        <p>
+            Retrouvez ci-dessous les documents détaillant la réalisation complète du projet.
+        </p>
+        
+        <!-- Cartes PDF -->
+        <div class="pdf-grid">
+            <div class="pdf-card">
+                <div class="pdf-icon"></div>
+                <h4>Rapport technique complet</h4>
+                <p>Rendu final du projet résumé en 3 pages</p>
+                <div class="pdf-buttons">
+                    <a href="documents/Elmedin_SULTANOVIC_livrable3(2).pdf" target="_blank" class="pdf-btn view-btn"> Voir</a>
+                </div>
             </div>
-        </section>
 
-        <!-- Section résultats -->
-        <section class="project-section">
-            <h2> Résultats & Apprentissages</h2>
-            <div class="results-box">
-                <h3>Résultats obtenus</h3>
-                <ul>
-                    <li>Infrastructure réseau opérationnelle et sécurisée</li>
-                    <li>Réduction de 80% des vulnérabilités détectées</li>
-                    <li>Documentation technique complète</li>
-                </ul>
+            <div class="pdf-card">
+                <div class="pdf-icon"></div>
+                <h4>Dashboards</h4>
+                <p>Présentation des dashboards</p>
+                <div class="pdf-buttons">
+                    <a href="documents/Elmedin_SULTANOVIC_livrable2_dashboards-1.pdf" target="_blank" class="pdf-btn view-btn"> Voir</a>
 
-                <h3>Compétences développées</h3>
-                <ul>
-                    <li>Configuration avancée de routeurs et switches</li>
-                    <li>Analyse de trafic réseau</li>
-                    <li>Gestion de la sécurité périmétrique</li>
-                    <li>Travail en autonomie et documentation</li>
-                </ul>
+                </div>
             </div>
-        </section>
+
+            <div class="pdf-card">
+                <div class="pdf-icon"></div>
+                <h4>Guide de configuration</h4>
+                <p>Schéma ip du réseaux</p>
+                <div class="pdf-buttons">
+                    <a href="documents/livrable1_elmedin.pdf" target="_blank" class="pdf-btn view-btn"> Voir</a>
+
+                </div>
+            </div>
+        </div>
+        
+
+
+    </div>
+</section>
+
 
     </div>
 
