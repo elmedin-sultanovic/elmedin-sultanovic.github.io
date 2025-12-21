@@ -91,6 +91,8 @@ nav a:hover {
     white-space: nowrap;
     animation: typing 4s steps(40) infinite, blink 0.75s step-end infinite;
     margin: 2rem 0;
+    display: inline-block;
+    max-width: fit-content;
 }
 
 @keyframes typing {
@@ -137,6 +139,7 @@ nav a:hover {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
     margin-top: 3rem;
+    justify-items: center;
 }
 
 .project-card {
@@ -295,4 +298,20 @@ section.active {
     .projects-grid {
         grid-template-columns: 1fr;
     }
+}
+
+.project-link {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.7rem 1.5rem;
+    background: var(--primary-blue);
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.project-link:hover {
+    background: var(--light-blue);
+    transform: translateX(5px);
 }
