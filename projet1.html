@@ -13,65 +13,81 @@
     <div class="project-container">
         <!-- En-tête du projet -->
         <header class="project-header">
-            <h1>🔒 Nom de ton Projet 1</h1>
-            <p class="project-subtitle">Infrastructure réseau sécurisée | Date: Janvier 2024</p>
-            <div class="project-tags">
-                <span class="tag">Python</span>
-                <span class="tag">Linux</span>
-                <span class="tag">Wireshark</span>
-                <span class="tag">Sécurité réseau</span>
-            </div>
+            <h1> SAE5.cyber03</h1>
+            <p class="project-subtitle">Projet d'école consistant à mettre en place une infrastructure de supervision sécurisée. 
+            </p>
+
         </header>
 
         <!-- Section contexte -->
         <section class="project-section">
-            <h2>📋 Contexte du projet</h2>
+            <h2> Contexte du projet</h2>
             <p>
-                Décris ici le contexte de ton projet : pourquoi tu l'as fait, dans quel cadre (projet scolaire, personnel, stage), 
-                et quels étaient les objectifs principaux.
+            Dans le cadre de ce projet, j'ai aidé à mettre en place une infrastructure de supervision de la sécurité complète s’appuyant sur un SIEM (ELK Stack) et un IDS/IPS (Suricata). Cette phase finale vise à valider la capacité du système à détecter et corréler différents types d’activités malveillantes simulées à partir d’une machine attaquante. Les tests réalisés couvrent des scénarios d’intrusion classiques : scans réseau, tentatives de brute-force…
             </p>
-            <p>
-                Exemple : "Ce projet a été réalisé dans le cadre de ma formation en BUT R&T. L'objectif était de concevoir 
-                et sécuriser une infrastructure réseau pour une PME fictive en appliquant les bonnes pratiques de cybersécurité."
-            </p>
+
         </section>
 
         <!-- Section objectifs -->
         <section class="project-section">
-            <h2>🎯 Objectifs</h2>
+            <h2> Objectifs</h2>
             <ul class="objectives-list">
-                <li>Objectif 1 : Configuration d'un réseau sécurisé</li>
-                <li>Objectif 2 : Mise en place d'un pare-feu</li>
-                <li>Objectif 3 : Analyse du trafic réseau</li>
-                <li>Objectif 4 : Documentation complète</li>
+                <li>Objectif 1 : Installation et configuration d'une machine SIEM en utilisant un docker ELK</li>
+                <li>Objectif 2 : Installation et configuration d'une machine IDS/IPS Suricata (Opnsense)</li>
+                <li>Objectif 3 : Installation et configuration d'une machine attaquante (Kali Linux)</li>
+                <li>Objectif 4 : Analyser les logs généré par les règles mise en place</li>
             </ul>
         </section>
 
-        <!-- Section images/captures d'écran -->
-        <section class="project-section">
-            <h2>📸 Captures d'écran & Schémas</h2>
-            <div class="images-grid">
-                <!-- Remplace les src par tes vraies images -->
-                <div class="image-card">
-                    <img src="images/projet1-schema.png" alt="Schéma réseau">
-                    <p class="image-caption">Architecture du réseau sécurisé</p>
-                </div>
-                <div class="image-card">
-                    <img src="images/projet1-capture1.png" alt="Capture Wireshark">
-                    <p class="image-caption">Analyse de trafic avec Wireshark</p>
-                </div>
-                <div class="image-card">
-                    <img src="images/projet1-capture2.png" alt="Configuration firewall">
-                    <p class="image-caption">Configuration du pare-feu</p>
-                </div>
-            </div>
-        </section>
+
+<!-- Section images/captures d'écran -->
+<section class="project-section">
+    <h2>📸 Captures d'écran & Schémas</h2>
+    <div class="images-grid">
+        <div class="image-card" onclick="openZoomModal('images/projet1-schema.png', 'Schéma du réseau')">
+            <img src="images/projet1-schema.png" alt="Schéma réseau">
+            <p class="image-caption">Schéma du réseau qui montre les différentes machines utilisées, la machine SIEM et la machine OPNsense ont toutes les deux été installées et configurées depuis VMware qui permet de créer des machines virtuelles. Une fois le tout bien configuré, chaque machine du réseau pouvait avoir accès à OPNsense et à elasticsearch.</p>
+        </div>
+        <div class="image-card" onclick="openZoomModal('images/projet1-dashboard1.png', 'Dashboard Elasticsearch')">
+            <img src="images/projet1-dashboard1.png" alt="Dashboard Elasticsearch">
+            <p class="image-caption">Dashboard qui montre: les IP qui sont concernées par le plus de logs, les pays les plus concernés, les codes de status HTTP afin de détecter si des erreurs arrivent, les protocoles les plus utilisés.</p>
+        </div>
+        <div class="image-card" onclick="openZoomModal('images/projet1-alert.png', 'Alertes Suricata')">
+            <img src="images/projet1-alert.png" alt="Alertes Suricata">
+            <p class="image-caption">Les alertes générées par Suricata à l'aide des règles que j'ai créées</p>
+        </div>
+                <div class="image-card" onclick="openZoomModal('images/projet1-elasticalert.png', 'Alertes Suricata')">
+            <img src="images/projet1-elasticalert.png" alt="Alertes Suricata">
+            <p class="image-caption">Les alertes générées par Suricata depuis ELK (elasticsearch) </p>
+        </div>
+    </div>
+</section>
+
+<!-- Modal zoom avec déplacement -->
+<div id="zoomModal" class="zoom-modal">
+    <span class="zoom-close" onclick="closeZoomModal()">&times;</span>
+    <div class="zoom-controls">
+        <button onclick="zoomIn()">🔍+</button>
+        <button onclick="zoomOut()">🔍-</button>
+        <button onclick="resetZoom()">⟲</button>
+    </div>
+    <div class="zoom-container" id="zoomContainer">
+        <img id="zoomImage" draggable="false">
+    </div>
+</div>
+
+<!-- Modal pour afficher l'image en grand -->
+<div id="imageModal" class="modal" onclick="closeModal()">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImage">
+    <div id="caption"></div>
+</div> 
 
         <!-- Section réalisation -->
         <section class="project-section">
-            <h2>⚙️ Réalisation technique</h2>
+            <h2> Réalisation technique</h2>
             <div class="technical-details">
-                <h3>Technologies utilisées</h3>
+                <h3></h3>
                 <p>
                     Liste et explique les technologies, outils et langages que tu as utilisés.
                 </p>
@@ -94,7 +110,7 @@
 
         <!-- Section résultats -->
         <section class="project-section">
-            <h2>✅ Résultats & Apprentissages</h2>
+            <h2> Résultats & Apprentissages</h2>
             <div class="results-box">
                 <h3>Résultats obtenus</h3>
                 <ul>
@@ -113,21 +129,6 @@
             </div>
         </section>
 
-        <!-- Section liens -->
-        <section class="project-section">
-            <h2>🔗 Liens & Ressources</h2>
-            <div class="links-section">
-                <a href="https://github.com/ton-username/projet1" target="_blank" class="resource-link">
-                    🐙 Code source sur GitHub
-                </a>
-                <a href="documents/rapport-projet1.pdf" target="_blank" class="resource-link">
-                    📄 Rapport technique (PDF)
-                </a>
-                <a href="documents/presentation-projet1.pdf" target="_blank" class="resource-link">
-                    📊 Présentation du projet
-                </a>
-            </div>
-        </section>
     </div>
 
     <!-- Footer -->
@@ -135,5 +136,115 @@
         <a href="index.html" class="footer-link">Retour à l'accueil</a>
         <a href="projet2.html" class="footer-link">Projet suivant →</a>
     </footer>
+<script>
+let scale = 1;
+let panning = false;
+let pointX = 0;
+let pointY = 0;
+let start = { x: 0, y: 0 };
+
+function openZoomModal(imageSrc, title) {
+    const modal = document.getElementById('zoomModal');
+    const img = document.getElementById('zoomImage');
+    
+    modal.style.display = 'flex';
+    img.src = imageSrc;
+    
+    scale = 1;
+    pointX = 0;
+    pointY = 0;
+    setTransform();
+}
+
+function closeZoomModal() {
+    document.getElementById('zoomModal').style.display = 'none';
+}
+
+function zoomIn() {
+    scale += 0.3;
+    setTransform();
+}
+
+function zoomOut() {
+    if (scale > 0.5) {
+        scale -= 0.3;
+        setTransform();
+    }
+}
+
+function resetZoom() {
+    scale = 1;
+    pointX = 0;
+    pointY = 0;
+    setTransform();
+}
+
+function setTransform() {
+    const img = document.getElementById('zoomImage');
+    img.style.transform = `translate(${pointX}px, ${pointY}px) scale(${scale})`;
+}
+
+// Gestion du drag pour déplacer l'image
+const zoomContainer = document.getElementById('zoomContainer');
+
+zoomContainer.addEventListener('mousedown', function(e) {
+    e.preventDefault();
+    start = { x: e.clientX - pointX, y: e.clientY - pointY };
+    panning = true;
+});
+
+zoomContainer.addEventListener('mouseup', function() {
+    panning = false;
+});
+
+zoomContainer.addEventListener('mousemove', function(e) {
+    e.preventDefault();
+    if (!panning) return;
+    
+    pointX = e.clientX - start.x;
+    pointY = e.clientY - start.y;
+    setTransform();
+});
+
+// Support tactile pour mobile
+zoomContainer.addEventListener('touchstart', function(e) {
+    const touch = e.touches[0];
+    start = { x: touch.clientX - pointX, y: touch.clientY - pointY };
+    panning = true;
+});
+
+zoomContainer.addEventListener('touchend', function() {
+    panning = false;
+});
+
+zoomContainer.addEventListener('touchmove', function(e) {
+    if (!panning) return;
+    e.preventDefault();
+    
+    const touch = e.touches[0];
+    pointX = touch.clientX - start.x;
+    pointY = touch.clientY - start.y;
+    setTransform();
+});
+
+// Zoom avec la molette
+zoomContainer.addEventListener('wheel', function(e) {
+    e.preventDefault();
+    
+    if (e.deltaY < 0) {
+        scale += 0.1;
+    } else {
+        if (scale > 0.5) scale -= 0.1;
+    }
+    
+    setTransform();
+});
+
+// Fermer avec Échap
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeZoomModal();
+});
+</script>
+
 </body>
 </html>

@@ -152,9 +152,8 @@ body {
     transition: all 0.3s ease;
 }
 
-.image-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 30px rgba(59, 130, 246, 0.4);
+.image-card img:hover {
+    transform: scale(1.05);
 }
 
 .image-card img {
@@ -162,6 +161,14 @@ body {
     height: 200px;
     object-fit: cover;
     border-bottom: 2px solid var(--primary-blue);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.image-card img:active {
+    transform: scale(2.5);
+    position: relative;
+    z-index: 100;
 }
 
 .image-caption {
@@ -278,4 +285,87 @@ body {
     .footer-link {
         text-align: center;
     }
+    /* Modal zoom interactif */
+.zoom-modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    justify-content: center;
+    align-items: center;
+}
+
+.zoom-close {
+    position: absolute;
+    top: 2rem;
+    right: 3rem;
+    color: var(--primary-blue);
+    font-size: 3rem;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 10001;
+    transition: all 0.3s ease;
+}
+
+.zoom-close:hover {
+    color: var(--light-blue);
+    transform: scale(1.2);
+}
+
+.zoom-controls {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    display: flex;
+    gap: 1rem;
+    z-index: 10001;
+}
+
+.zoom-controls button {
+    background: var(--card-bg);
+    color: var(--primary-blue);
+    border: 2px solid var(--primary-blue);
+    padding: 0.8rem 1.2rem;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.zoom-controls button:hover {
+    background: var(--primary-blue);
+    color: #ffffff;
+    transform: scale(1.1);
+}
+
+.zoom-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    cursor: grab;
+}
+
+.zoom-container:active {
+    cursor: grabbing;
+}
+
+#zoomImage {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    transition: transform 0.1s ease;
+    user-select: none;
+}
+
+.image-card {
+    cursor: pointer;
+}
+    
 }
