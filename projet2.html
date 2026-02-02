@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet 2 - Portfolio Cybersécurité</title>
+    <link rel="stylesheet" href="style-projet.css">
+</head>
+<body>
+    <!-- Bouton retour -->
+    <a href="index.html#projects" class="back-button">← Retour aux projets</a>
+
+    <div class="project-container">
+        <!-- En-tête du projet -->
+        <header class="project-header">
+            <h1>Mise en place d’un HomeLab Linux avec serveur TeamSpeak</h1>
+            <p class="project-subtitle"></p>
+            <div class="project-tags">
+                <span class="tag"></span>
+                <span class="tag"></span>
+                <span class="tag"></span>
+            </div>
+        </header>
+
+        <!-- Section contexte -->
+        <section class="project-section">
+            <h2> Contexte du projet</h2>
+            <p>
+                Mise en place d’un HomeLab personnel sur mini PC S12 sous Linux.
+Déploiement d’un serveur TeamSpeak pour la communication privée et utilisation de Portainer.io pour la gestion et la supervision des services.
+Ce projet s’inscrit dans le cadre du BUT Réseaux & Télécommunications (3ᵉ année) et mobilise la compétence « Administrer ».
+            </p>
+        </section>
+
+        <!-- Section objectifs -->
+        <section class="project-section">
+            <h2> Objectifs</h2>
+            <ul class="objectives-list">
+                <li>Mettre en place un environnement serveur Linux fonctionnel</li>
+                <li>Déployer un service réseau accessible depuis un client</li>
+                <li>Administrer et superviser les services via Portainer</li>
+            </ul>
+        </section>
+
+        <!-- Section images/captures d'écran -->
+        <section class="project-section">
+            <h2> Captures d'écran & Schémas</h2>
+            <div class="images-grid">
+                <div class="image-card">
+                    <a href="images/projet2-image1.png" target="_blank">
+                        <img src="images/projet2-image1.png" alt="Image 1">
+                    </a>
+                    <p class="image-caption">Capture d'écran de l'outil de gestion Docker "Portainer.io"</p>
+                </div>
+                <div class="image-card">
+                    <a href="images/projet2-image2.png" target="_blank">
+                        <img src="images/projet2-image2.png" alt="Image 2">
+                    </a>
+                    <p class="image-caption">Capture d'écran depuis Teamviewer en se connectant sur l'adresse du Homelab</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section réalisation -->
+        <section class="project-section">
+            <h2> Analyse du projet</h2>
+            <div class="technical-details">
+                <h3>Qu'ai je appris ?</h3>
+                <p>
+                     À travers la mise en place de ce HomeLab, j’ai appris comment fonctionne un
+    environnement serveur personnel et en quoi ce type d’infrastructure peut
+    servir à démontrer mon autonomie et ma capacité à administrer des services
+    informatiques en conditions réelles.
+    </p>
+<p>
+    Ce projet m’a également permis de découvrir et d’utiliser de nouveaux outils
+    que je ne connaissais pas auparavant, notamment Portainer. L’utilisation de
+    cet outil m’a fait prendre conscience de l’importance de l’automatisation,
+    de la supervision et de l’optimisation du temps dans le métier
+    d’administrateur systèmes et réseaux. En effet, un informaticien cherche à
+    simplifier et rationaliser ses tâches grâce à des outils adaptés, afin de
+    gagner en efficacité et en fiabilité.
+</p>
+                
+
+                <h3>Difficultés rencontrées</h3>
+                <p>
+                      La principale difficulté rencontrée au cours de ce projet a été liée aux
+    contraintes matérielles du mini PC utilisé. Celui-ci, bien que suffisant
+    pour des tests et des services simples, ne dispose pas des capacités de
+    stockage d’un véritable serveur ou d’un NAS professionnel.
+                </p>
+                <p>
+    Cette limitation matérielle entraîne une saturation rapide de l’espace
+    disque, ce qui complique le déploiement simultané de plusieurs services.
+    Dans un contexte de HomeLab à budget réduit, il est donc nécessaire de faire
+    des choix sur les services hébergés et d’optimiser l’utilisation des
+    ressources disponibles.
+</p>
+<p>
+    Cette contrainte m’a permis de mieux comprendre les enjeux liés au
+    dimensionnement d’une infrastructure, ainsi que l’impact direct du budget
+    sur les choix techniques réalisés lors de la conception d’un système
+    informatique.
+</p>
+            </div>
+        </section>
+
+        <!-- Section résultats -->
+        <section class="project-section">
+            <h2> Apprentissages</h2>
+            <div class="results-box">
+                <h3>Apprentissages Critiques (AC)</h3>
+                <ul>
+                    <li>       <strong>AC 2.1 :</strong> Installer, configurer et maintenir un système
+        d’exploitation pour assurer le bon fonctionnement d’un serveur.</li>
+                    <li>        <strong>AC 2.2 :</strong> Déployer et administrer des services réseau
+        communicants</li>
+                </ul>
+                    <li>
+        <strong>AC 2.3 :</strong> Superviser, diagnostiquer et maintenir une
+        infrastructure à l’aide d’outils adaptés.
+    </li>
+
+                <h3>Compétences du BUT mobilisées</h3>
+                <ul>
+
+                    <li>        <strong>Compétence 1 – Gérer les réseaux et l’Internet</strong><br>
+        Compréhension du fonctionnement réseau, adressage IP et accès aux services.</li>
+                </ul>
+                                    <li>        <strong>Compétence 2 – Administrer des systèmes informatiques communicants complexes</strong><br>
+        Installation, configuration et administration d’un système Linux,
+        déploiement de services réseau et supervision via un outil dédié.</li>
+            </div>
+        </section>
+
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="project-footer">
+        <a href="projet1.html" class="footer-link">← Projet précédent</a>
+        <a href="index.html" class="footer-link">Retour à l'accueil</a>
+        <a href="projet3.html" class="footer-link">Projet suivant →</a>
+    </footer>
+</body>
+</html>
